@@ -1,17 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
-import SearchAppBar from './components/AppBar';
+import { createBrowserHistory } from 'history';
 import Home from './pages/Home';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import VacationSpotCard from './components/VacationSpotCard';
 
 function App() {
   return (
-    <BrowserRouter>
-      <SearchAppBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route path="/:cityId" element={<VacationSpotCard />} />
+    </Routes>
   );
 }
 

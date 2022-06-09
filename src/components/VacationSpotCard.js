@@ -1,15 +1,9 @@
-import * as React from 'react';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
+import React, { useState } from 'react';
+import { Paper, Grid, Box, Typography, Rating, createTheme, ThemeProvider } from '@mui/material';
 import { labels } from './locationImages';
-import Typography from '@mui/material/Typography';
-import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
-import { createTheme, ThemeProvider } from '@mui/material';
-import { MonetizationOn, AccessTime } from '@mui/icons-material';
-import Modal from '@mui/material/Modal';
-import ReactPlayer from 'react-player/youtube';
+import { MonetizationOn } from '@mui/icons-material';
+import ModalPlayer from './ModalPlayer';
 
 const theme = createTheme({
   components: {
@@ -41,23 +35,14 @@ function getLabelText(value) {
 }
 
 const VacationSpotCard = ({ city }) => {
-  const [value, setValue] = React.useState(city.rating);
-  const [hover, setHover] = React.useState(-1);
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [value, setValue] = useState(city.rating);
+  const [hover, setHover] = useState(-1);
 
   return (
     <Grid item xs={3}>
       <ThemeProvider theme={theme}>
         <Paper elevation={3}>
-          <img src={city.imageUrl[0]} alt={city.name} className="img" onClick={handleOpen} />
-          <Modal open={open} onClose={handleClose} aria-labelledby={city.name} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Box sx={{ position: 'absolute', border: '2px solid #000' }}>
-              <ReactPlayer url={city.video} />
-            </Box>
-          </Modal>
+          <ModalPlayer city={city} />
           <Box padding={1}>
             <Typography variant="subtitle2" component="h2" marginBottom={1}>
               {city.name}
