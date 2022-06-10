@@ -4,7 +4,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-// import InputBase from '@mui/material/InputBase';
 import DropdownMenu from './DropdownMenu';
 import SearchIcon from '@mui/icons-material/Search';
 import SearchFunction from './SearchFunction';
@@ -34,32 +33,12 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   justifyContent: 'center',
 }));
 
-// const StyledInputBase = styled(InputBase)(({ theme }) => ({
-//   color: 'inherit',
-//   '& .MuiInputBase-input': {
-//     padding: theme.spacing(1, 1, 1, 0),
-//     // vertical padding + font size from searchIcon
-//     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-//     transition: theme.transitions.create('width'),
-//     width: '100%',
-//     [theme.breakpoints.up('sm')]: {
-//       width: '14ch',
-//       '&:focus': {
-//         width: '20ch',
-//       },
-//     },
-//   },
-// }));
-
-export default function SearchAppBar() {
+export default function SearchAppBar({ setSelectedCity }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
         <Toolbar>
-          {/* <IconButton size="large" edge="start" color="inherit" aria-label="open drawer" sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton> */}
-          <DropdownMenu />
+          <DropdownMenu setSelectedCity={setSelectedCity} />
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
             Vacation Viewer
           </Typography>
@@ -67,15 +46,10 @@ export default function SearchAppBar() {
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
-            <SearchFunction />
-            {/* <StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} /> */}
+            <SearchFunction setSelectedCity={setSelectedCity} />
           </Search>
         </Toolbar>
       </AppBar>
     </Box>
   );
 }
-
-/*
- options={cities.map((city) => city.name)} renderInput={(params) => <TextField {...params} InputProps={{ ...params.InputProps, type: 'search' }} />}
-*/

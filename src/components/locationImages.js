@@ -14,7 +14,7 @@ const labels = {
 const cities = [
   {
     id: 1,
-    name: 'Las Vegas, NV',
+    name: 'Las Vegas, NV, US',
     rating: 4.5,
     reviews: 14500,
     price: '$$$',
@@ -24,7 +24,7 @@ const cities = [
   },
   {
     id: 2,
-    name: 'New York City, NY',
+    name: 'New York City, NY, US',
     rating: 3.5,
     reviews: 11564,
     price: '$$$',
@@ -34,7 +34,7 @@ const cities = [
   },
   {
     id: 3,
-    name: 'Boston, MA',
+    name: 'Boston, MA, US',
     rating: 4.0,
     reviews: 8705,
     price: '$$',
@@ -44,7 +44,7 @@ const cities = [
   },
   {
     id: 4,
-    name: 'San Francisco, CA',
+    name: 'San Francisco, CA, US',
     rating: 4,
     reviews: 9870,
     price: '$$$',
@@ -54,7 +54,7 @@ const cities = [
   },
   {
     id: 5,
-    name: 'Seattle, WA',
+    name: 'Seattle, WA, US',
     rating: 4,
     reviews: 17558,
     price: '$$',
@@ -64,7 +64,7 @@ const cities = [
   },
   {
     id: 6,
-    name: 'Denver, CO',
+    name: 'Denver, CO, US',
     rating: 5,
     reviews: 18558,
     price: '$$',
@@ -74,7 +74,7 @@ const cities = [
   },
   {
     id: 7,
-    name: 'Philadelphia, PA',
+    name: 'Philadelphia, PA, US',
     rating: 3.5,
     reviews: 10558,
     price: '$',
@@ -84,7 +84,7 @@ const cities = [
   },
   {
     id: 8,
-    name: 'Austin, TX',
+    name: 'Austin, TX, US',
     rating: 4.5,
     reviews: 12758,
     price: '$$',
@@ -94,7 +94,7 @@ const cities = [
   },
   {
     id: 9,
-    name: 'New Orleans, LA',
+    name: 'New Orleans, LA, US',
     rating: 4.5,
     reviews: 14558,
     price: '$',
@@ -104,7 +104,7 @@ const cities = [
   },
   {
     id: 10,
-    name: 'Honolulu, HI',
+    name: 'Honolulu, HI, US',
     rating: 5,
     reviews: 17098,
     price: '$',
@@ -112,8 +112,109 @@ const cities = [
     imageUrl: ['https://www.treksplorer.com/wp-content/uploads/things-to-do-in-honolulu.jpg'],
     video: 'https://www.youtube.com/watch?v=LQnFzajjeLI&ab_channel=GlobalVillage',
   },
+  {
+    id: 11,
+    name: 'Philippines',
+    rating: 5,
+    reviews: 21158,
+    price: '$',
+    imageUrl: ['https://www.lowyinstitute.org/sites/default/files/GettyImages-512968732%20copy.jpg'],
+    video: 'https://www.youtube.com/watch?v=a9kJhdJs4lU&ab_channel=Roamaroo',
+  },
+  {
+    id: 12,
+    name: 'Bali, Indonesia',
+    rating: 5,
+    reviews: 17792,
+    price: '$$',
+    imageUrl: ['https://cdn.britannica.com/36/101236-050-F033976B/Pura-Ulun-bank-Hindu-Bali-Indonesia-Lake.jpg'],
+    video: 'https://www.youtube.com/watch?v=Mn-owFxA4hw&ab_channel=TheOtherSide',
+  },
+  {
+    id: 13,
+    name: 'Seoul, Korea',
+    rating: 4.5,
+    reviews: 24418,
+    price: '$$',
+    imageUrl: ['https://www.reuters.com/resizer/57HH6biGApkSLcrIhLvtnEkrpvs=/1920x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/6LHDDILTXJNB5PKFGQLX3KV4BA.jpg'],
+    video: 'https://www.youtube.com/watch?v=sr3O7ArQTYY&ab_channel=Expedia',
+  },
+  {
+    id: 14,
+    name: 'Tokyo, Japan',
+    rating: 4.5,
+    reviews: 23221,
+    price: '$$$',
+    imageUrl: ['https://previews.123rf.com/images/sepavo/sepavo1401/sepavo140100113/24995786-tokyo-january-2-akihabara-district-january-2-2013-in-tokyo-jp-the-district-is-a-major-shopping-area-.jpg'],
+    video: 'https://www.youtube.com/watch?v=00ZXaXIABMY&ab_channel=japan-guide.com',
+  },
+  {
+    id: 15,
+    name: 'Prague, Czech Republic',
+    rating: 4,
+    reviews: 15663,
+    price: '$$$',
+    imageUrl: ['https://s27363.pcdn.co/wp-content/uploads/2017/11/Tyn-Church.jpg.optimal.jpg'],
+    video: 'https://www.youtube.com/watch?v=ErbOZlSukzg&ab_channel=RyanShirley',
+  },
+  {
+    id: 16,
+    name: 'Paris, France',
+    rating: 4.5,
+    reviews: 23889,
+    price: '$$$',
+    imageUrl: ['https://media.cntraveler.com/photos/5cf96a9dd9fb41f17ed08435/master/pass/Eiffel%20Tower_GettyImages-1005348968.jpg'],
+    video: 'https://www.youtube.com/watch?v=T5Yu6CGPaqA&ab_channel=vagabrothers',
+  },
+  {
+    id: 17,
+    name: 'Berlin, Germany',
+    rating: 4,
+    reviews: 21992,
+    price: '$$',
+    imageUrl: ['https://imagesvc.meredithcorp.io/v3/mm/image?q=60&c=sc&poi=face&w=1800&h=900&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2021%2F09%2F14%2Fberlin-germany-aerial-lead-BERLINTG0921.jpg'],
+    video: 'https://www.youtube.com/watch?v=l7l8C9SzvqE&ab_channel=HungryPassport',
+  },
+  {
+    id: 18,
+    name: 'Istanbul, Turkey',
+    rating: 4.5,
+    reviews: 18232,
+    price: '$$',
+    imageUrl: ['https://tourscanner.com/blog/wp-content/uploads/2021/08/things-to-do-in-Istanbul-Turkey.jpg'],
+    video: 'https://www.youtube.com/watch?v=1L2PIyGczCA&ab_channel=WorldWildHearts',
+  },
+  {
+    id: 19,
+    name: 'Costa Rica',
+    rating: 4.5,
+    reviews: 20881,
+    price: '$$',
+    imageUrl: ['https://media.tacdn.com/media/attractions-content--1x-1/0b/2a/1b/40.jpg'],
+    video: 'https://www.youtube.com/watch?v=32ZYeMqq11g&ab_channel=JoyousTravel',
+  },
+  {
+    id: 20,
+    name: 'Medellin, Colombia',
+    rating: 4,
+    reviews: 19227,
+    price: '$',
+    imageUrl: ['https://mediaim.expedia.com/destination/1/220c8c7ced5ebeda571f9ff5754001f4.jpg'],
+    video: 'https://www.youtube.com/watch?v=EtGwI68PBBM&ab_channel=Travelwithchris',
+  },
 ];
 
+/*
+ {
+    id:
+    name:
+    rating:
+    reviews:
+    price:
+    imageUrl:
+    video:
+  },
+*/
 module.exports = {
   labels,
   cities,

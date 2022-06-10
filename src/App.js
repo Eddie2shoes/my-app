@@ -9,7 +9,6 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route path="/:cityId" element={<VacationSpotCard />} />
     </Routes>
   );
 }
